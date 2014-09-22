@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+buzzwords = ['Responsible',
+						'Strategic',
+						'Creative',
+						'Effective',
+						'Patient',
+						'Expert',
+						'Organizational',
+						'Driven',
+						'Innovative',
+						'Analytical']
+
+fizz = [" I am "]
+
+buzzwords.each do |word|
+	Buzzword.create(word:word)
+end
+
+fizz.each do |phrase|
+	Fizz.create(phrase:phrase)
+end
