@@ -1,4 +1,8 @@
 class Fizzbuzz
+	def initialize(text)
+		@text = text
+	end
+
 	def self.fizzbuzzed(text)
 		p text
 		fizzed = self.fizz(text)
@@ -28,5 +32,11 @@ class Fizzbuzz
 	def self.fizzbuzzword(text)
 		text.gsub! 'Fizz Buzzword', 'FizzBuzzword'
 		return text
+	end
+
+	def fizz_count
+	end
+
+	def buzz_count
 	end
 end

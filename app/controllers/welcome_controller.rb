@@ -4,10 +4,12 @@ class WelcomeController < ApplicationController
   end
 
   def fizzbuzz
+
+    p "fizzbuzz!"*25
 		# " I am responsible. creative"
   	response = Fizzbuzz.fizzbuzzed(params[:input])
   	if request.xhr?
-  		render :json => response.to_json
+  		render :json => response
   	end
   end
 end
