@@ -1,6 +1,6 @@
 class Fizzbuzz
 	def self.fizzbuzzed(text)
-		p "hello"
+		p text
 		fizzed = self.fizz(text)
 		buzzed = self.buzzword(fizzed)
 		self.fizzbuzzword(buzzed)
@@ -9,7 +9,8 @@ class Fizzbuzz
 	def self.fizz(text)
 		p "in fizz"
 		Fizz.all.pluck("phrase").each do |phrase|
-			text.gsub! phrase, 'Fizz'
+			p phrase
+			text.gsub! phrase, "Fizz "
 		end
 		return text
 	end
