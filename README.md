@@ -21,3 +21,6 @@ FizzBuzzword: If it is 'I am buzzword'
 8. Driven
 9. Innovative
 10. Analytical
+
+
+uses this gem: https://github.com/emorikawa/linkedin-oauth2
