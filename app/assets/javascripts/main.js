@@ -6,7 +6,7 @@ $("#submit_btn").on("click", function(e){
 		request = $.post("oauth");
 		request.done(function(data){
 			console.log(data);
-			window.open(data, "_blank");
+			window.location(data);
 		});
 
 	});
@@ -17,18 +17,3 @@ $("#submit_btn").on("click", function(e){
 	
 	
 });
-			// var keys = {
-		// 	YOUR_API_KEY: '751n3s1mdd0pu7',
-		// 	SCOPE: 'r_fullprofile',
-		// 	STATE: '1937rbfiek3ubgfk2irRwhETs',
-		// 	YOUR_REDIRECT_URI: 'fizzbuzz'
-		// };
-		// var request = $.post("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id="+keys.YOUR_API_KEY+"&scope="+keys.SCOPE+"&state="+keys.STATE+"&redirect_uri="+keys.YOUR_REDIRECT_URI);
-
-
-		// request = $.get("fizzbuzz", {input: $("#txtArea").val()})
-		// request.done(function(data){
-		// 	console.log(data);
-		// 	$("#returnedText").html('<p>'+data+'</p>')
-		// 	Style_fizzbuzz();
-		// })
