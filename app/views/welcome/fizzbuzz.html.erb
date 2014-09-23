@@ -1,7 +1,10 @@
-<div class = "row">
+<div class = "row center-text">
 <h2>Your FizzBuzz(ed)word Linkedin Summary</h2>
+</div>
+<div class = "row">
+<h3>Summary</h3>
  <p>
- 	<%@response.each do |word|%>
+ 	<%@summary.each do |word|%>
  		<% if word == 'Fizz' || word == 'Buzzword'%>
  			<span><%=word %> </span>
  		<%else%>
@@ -9,4 +12,20 @@
  		<%end%>
  	<%end%>
  </p>
+ <h3>Positions</h3>
+ 	<%@positions.each do |position|%>
+ 		<h4><%= position.company.name%></h4>
+ 		<h5><%= position.title%></h5>
+ 		<%unless position.summary.nil?%>
+ 		<p>
+	 		<%position.summary.each do |word|%>
+		 		<% if word == 'Fizz' || word == 'Buzzword'%>
+		 			<span><%=word %> </span>
+		 		<%else%>
+		 			<%=word %> 
+		 		<%end%>
+		 	<%end%>
+	 	</p>
+	 	<%end%>
+ 	<%end%>
 </div>
