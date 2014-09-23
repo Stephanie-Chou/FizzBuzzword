@@ -5,8 +5,8 @@
 <h3>Summary</h3>
  <p>
  	<%@summary.each do |word|%>
- 		<% if word == 'Fizz' || word == 'Buzzword'%>
- 			<span><%=word %> </span>
+ 		<% if word[0] == 'Fizz' || word[0] == 'Buzzword'%>
+ 			<span href="#" data-toggle = "tooltip" title = <%=word[1]%>><%=word[0] %> </span>
  		<%else%>
  			<%=word %> 
  		<%end%>
@@ -19,8 +19,8 @@
  		<%unless position.summary.nil?%>
  		<p>
 	 		<%position.summary.each do |word|%>
-		 		<% if word == 'Fizz' || word == 'Buzzword'%>
-		 			<span><%=word %> </span>
+		 		<% if word[0] == 'Fizz' || word[0] == 'Buzzword'%>
+		 			<span href="#" data-toggle = "tooltip" title = <%=word[1]%>><%=word[0] %> </span>
 		 		<%else%>
 		 			<%=word %> 
 		 		<%end%>

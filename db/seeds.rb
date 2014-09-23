@@ -16,7 +16,7 @@ buzzwords = ['Responsible',
 						'Innovative',
 						'Analytical']
 
-fizz = [ "I am ", "I "]
+fizz = ["I", "my"]
 
 buzzwords.each do |word|
 	Buzzword.create(word:word)

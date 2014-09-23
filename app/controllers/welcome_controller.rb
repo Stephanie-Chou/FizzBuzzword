@@ -17,7 +17,6 @@ class WelcomeController < ApplicationController
     profile = Oauth.get_profile(access_token)
 		# " I am responsible. creative"
   	@summary = Fizzbuzz.fizzbuzzed(profile["summary"])
-
     profile["positions"]["all"].each do |position|
       unless position.summary.nil?
         position["summary"] = Fizzbuzz.fizzbuzzed(position["summary"])

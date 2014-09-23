@@ -6,24 +6,29 @@ class Fizzbuzz
 
 	def self.fizzbuzzed(text)
 		p text
-		fizzed = self.fizz(text)
-		buzzed = self.buzzword(fizzed)
-		self.fizzbuzzword(buzzed).split(' ')
-	end
 
+		fizzed = self.fizz(text.split(' '))
+
+		buzzed = self.buzzword(fizzed)
+		# self.fizzbuzzword(buzzed)
+	end
+	# find the phrase
 	def self.fizz(text)
 		p "in fizz"
-		Fizz.all.pluck("phrase").each do |phrase|
-			text.gsub! phrase, "Fizz "
+		text.each_with_index do |word, index|
+			Fizz.all.pluck("phrase").each do |phrase|
+				text[index] = ["Fizz", word] if word == phrase || word == phrase.downcase	
+			end
 		end
 		return text
 	end
 
 	def self.buzzword(text)
 		p "buzzword"
-		Buzzword.all.pluck("word").each do |word|
-			text.gsub! word, 'Buzzword'
-			text.gsub! word.downcase, 'Buzzword'
+		text.each_with_index do |word,index|
+			Buzzword.all.pluck("word").each do |buzzword|
+				text[index] = ["Buzzword", word] if word == buzzword || word == buzzword.downcase
+			end
 		end
 		return text
 	end
