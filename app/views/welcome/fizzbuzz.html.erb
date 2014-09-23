@@ -1,10 +1,12 @@
-<h2>Your FizzBuzz(ed)word Linkedin Summary<h2>
- </p>
+<div class = "row">
+<h2>Your FizzBuzz(ed)word Linkedin Summary</h2>
+ <p>
  	<%@response.each do |word|%>
  		<% if word == 'Fizz' || word == 'Buzzword'%>
- 			<span class = ><%=word %> </span>
+ 			<span><%=word %> </span>
  		<%else%>
  			<%=word %> 
  		<%end%>
  	<%end%>
- <p>
+ </p>
+</div>

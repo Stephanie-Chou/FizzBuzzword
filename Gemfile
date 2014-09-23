@@ -33,6 +33,8 @@ gem 'omniauth-linkedin-oauth2'
 gem 'pry'
 gem 'pry-remote'
 gem 'pry-nav'
+
+gem 'foundation-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

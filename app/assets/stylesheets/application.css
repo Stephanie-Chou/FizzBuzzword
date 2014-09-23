@@ -12,10 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
 
 span{
     color: red;
-    font-size: 10px;
-    font-family: sans-serif;
 }
