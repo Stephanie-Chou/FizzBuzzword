@@ -7,7 +7,7 @@ class Oauth
 		  # This must exactly match the redirect URI you set on your application's
 		  # settings page. If your redirect_uri is dynamic, pass it into
 		  # `auth_code_url` instead.
-		  config.redirect_uri  = "http://localhost:3000/fizzbuzz"
+		  config.redirect_uri  = "http://fizzbuzzword.herokuapp.com/fizzbuzz"
 		end
 
 		oauth = LinkedIn::OAuth2.new
