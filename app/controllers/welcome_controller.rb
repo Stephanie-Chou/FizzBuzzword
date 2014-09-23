@@ -16,10 +16,12 @@ class WelcomeController < ApplicationController
     access_token = Oauth.get_accessToken(params[:code])
     profile = Oauth.get_profile(access_token)
 		# " I am responsible. creative"
-  	@response = Fizzbuzz.fizzbuzzed(profile["summary"])
+  	p @response = Fizzbuzz.fizzbuzzed(profile["summary"])
   	if request.xhr?
+      p "xhr"
   		render :json => @response.to_json
   	else
+      p "not xhr"
       @response
     end
   end

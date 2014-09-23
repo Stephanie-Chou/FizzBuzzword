@@ -1,3 +1,4 @@
+require 'pry'
 class Fizzbuzz
 	def initialize(text)
 		@text = text
@@ -7,13 +8,12 @@ class Fizzbuzz
 		p text
 		fizzed = self.fizz(text)
 		buzzed = self.buzzword(fizzed)
-		self.fizzbuzzword(buzzed)
+		self.fizzbuzzword(buzzed).split(' ')
 	end
 
 	def self.fizz(text)
 		p "in fizz"
 		Fizz.all.pluck("phrase").each do |phrase|
-			p phrase
 			text.gsub! phrase, "Fizz "
 		end
 		return text
@@ -22,7 +22,6 @@ class Fizzbuzz
 	def self.buzzword(text)
 		p "buzzword"
 		Buzzword.all.pluck("word").each do |word|
-			p word
 			text.gsub! word, 'Buzzword'
 			text.gsub! word.downcase, 'Buzzword'
 		end
