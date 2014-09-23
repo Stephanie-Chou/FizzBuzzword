@@ -20,7 +20,7 @@ class WelcomeController < ApplicationController
   	if request.xhr?
   		render :json => @response.to_json
   	else
-      render :json => response.to_json
+      @response
     end
   end
 end

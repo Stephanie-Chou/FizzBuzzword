@@ -6,7 +6,7 @@ $("#submit_btn").on("click", function(e){
 		request = $.post("oauth");
 		request.done(function(data){
 			console.log(data);
-			window.location(data);
+			window.location.replace(data);
 		});
 
 	});
